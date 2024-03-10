@@ -4,7 +4,7 @@ body {
   font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color:#94a3b8;
   font-weight:400;
-  zoom: 110%;
+  font-size: 108%; 
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -199,6 +199,7 @@ footer {
   display: flex;
   flex-direction: row;
   padding: 40px;
+
   gap: 30px;
   justify-content: center;
   width: 100%;
@@ -227,24 +228,6 @@ footer {
   color: rgb(0, 142, 213);
 }
 
-.ab:hover:before{
-  content: "——";
-}
-
-.cp:hover:before{
-  content: "——";
-}
-.pr:hover:before{
-  content: "——";
-}
-.co:hover:before{
-  content: "——";
-}
-
-span:visited {
-  content: "——";
-  color:#069;
-}
 
 span{
   transition: all 1s;
@@ -325,3 +308,10 @@ span{
     color:#444;
   }
 }
+
+@media print, screen and (max-width: 490px) {
+  .card{
+    padding: 0px;
+  }
+}
+
