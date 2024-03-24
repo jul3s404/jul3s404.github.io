@@ -287,6 +287,21 @@ span{
   }
 }
 
+@media print, screen and (max-width: 668px) {
+  .card{
+    flex-direction: column-reverse ;
+    margin: 50px 15px 50px 15px;
+    border: 2px solid #475569;
+    border-radius: 7px;
+    max-width: 70%;
+  }
+
+  .card img{
+    border: 1px transparent;
+  }
+  
+}
+
 @media print, screen and (max-width: 480px) {
   body {
     padding:15px;
@@ -309,9 +324,5 @@ span{
   }
 }
 
-@media print, screen and (max-width: 490px) {
-  .card{
-    padding: 0px;
-  }
-}
+
 
