@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Jules Kreder-Bail</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/j.png">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+              publicKey: "J6c3p4__Wr9MF1LXS",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_6x59mo9', 'template_eoz92h8', this)
+                    .then(() => {
+                        alert("Votre message a bien été envoyé !");
+                    }, (error) => {
+                        alert("Il y'a eu une erreur...",error);
+                    });
+            });
+        }
+    </script>
+    
+
+</head>
+<body>
+    <div class="navbar-wrapper">
+        <div class="logo">
+            <h3>Jules <span class="gradient">Kreder-Bail</span></h3>
+        </div>
+        <div class="navbar-elements">
+            <p class="navbar-element" id="navbar-about-me">A propos de moi</p>
+            <p class="navbar-element" id="navbar-project">Projets</p>
+            <p class="navbar-element" id="navbar-contact-us">Me contacter</p>
+            <img id="burger-menu" class="burger-menu" width="40px" height="40px" src="img/burger-menu.svg" alt="Bouton de menu">
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-title">
+                <img width="50px" height="50px" id="close-menu" class="close-menu" src="img/cross.svg" alt="Crois de fermeture du menu">
+                <h3>Menu</h3>
+            </div>
+            <div class="mobile-menu-elements">
+                <p class="mobile-navbar-element" id="mobile-navbar-about-me">A propos de moi</p>
+                <p class="mobile-navbar-element" id="mobile-navbar-project">Projets</p>
+                <p class="mobile-navbar-element" id="mobile-navbar-contact-us">Me contacter</p>
+            </div>
+        </div>
+    </div>
+    <div class="page-wrapper">
+        <div class="section1">
+            <div class="main-text">
+                <div class="text-wrapper">
+                    <h1 class="hello" style="margin-bottom: 0;">👋 Bonjour ! Je suis <span class="gradient">Jules Kreder-Bail</span> !</h1>
+                    <h3 class="undertext" style="margin-top: 0;">Je réalise des sites webs sur mesure.</h3>
+                </div>
+
+                <button class="hire-me-button" id="hire-me-button">Me recruter </button>
+            </div>
+            <div class="main-img">
+                <img class="me" src="img/me.JPG" alt="Moi">
+            </div>
+        </div>
+        <div class="arrow-wrapper">
+            <img class="mode-icon" src="img/down-arrow.svg" alt="flèche vers le bas">
+            <p>A propos de moi</p>
+        </div>
+        <div class="section2">
+            <div class="section2-container">
+                <div class="subtext-wrapper">
+                    <h1 id="about-me">A Propos de moi</h1>
+                    
+                    <p class="p">
+                        Je suis né le 11 mars 2006 et depuis mon plus jeune âge, je suis passionné par l'informatique.
+                        <br><br>
+                        C'est donc naturellement qu'à 12 ans j'ai commencé à apprendre l'html pour réaliser mes premiers sites webs, puis j'ai enchainé avec le python et aujourd'hui, du haut de mes 18 ans je maitrise parfaitement ces deux langages qui me permettent d'être polyvalent.
+                        <br><br>
+                        Je suis ouvert à toutes propositions de travail et je serais ravis de vous aider à concrétiser vos projets.
+                    </p>
+                </div>
+                <div class="skill-wrapper">
+                    <h1>Mes compétences</h1>
+                    <div class="skill-dashboard-wrapper">
+                        <div class="progress-label">
+                            <div class="progress-wrapper">
+                                <div class="progression python">100%</div>
+                            </div>
+                            <p>Python</p>
+                        </div>
+
+                        <div class="progress-label">
+                            <div class="progress-wrapper">
+                                <div class="progression HTML">100%</div>
+                            </div>
+                            <p>HTML</p>
+                        </div>
+
+                        <div class="progress-label">
+                            <div class="progress-wrapper">
+                                <div class="progression CSS">100%</div>
+                            </div>
+                            <p>CSS</p>
+                        </div>
+
+                        <div class="progress-label">
+                            <div class="progress-wrapper">
+                                <div class="progression SQL">70%</div>
+                            </div>
+                            <p>SQL</p>
+                        </div>
+
+                        <div class="progress-label">
+                            <div class="progress-wrapper">
+                                <div class="progression JS">90%</div>
+                            </div>
+                            <p>Javascript</p>
+                        </div>
+
+                        <div class="progress-label">
+                            <div class="progress-wrapper">
+                                <div class="progression GIT">80%</div>
+                            </div>
+                            <p>GIT</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div class="arrow-wrapper">
+                <img class="mode-icon" src="img/down-arrow.svg" alt="flèche vers le bas">
+                <p>Mes projets</p>
+            </div>
+        </div>
+        
+
+        <div class="section3">
+            <div class="section3-wrapper">
+                <h1 id="project">Mes projets</h1>
+            </div>
+            <div class="projects-wrapper">
+                <div class="project" id="cce">
+                    <div class="project-image-wrapper">
+                        <img class="project-image" src="img/cce.png" alt="image caniscat education">
+                    </div>
+                    <div class="project-text">
+                        <h2>CanisCat-education</h2>
+                        <p class="subtext">CanisCat Education était mon premier vrai projet pour un vrai client. Le site est entièrement codé à la main et entièrement personnalisé pour le client.</p>
+                    </div>
+                </div>
+
+                <div class="project" id="conv">
+                    <div class="project-image-wrapper">
+                        <img class="project-image" src="img/conv.png" alt="image caniscat education">
+                    </div>
+                    <div class="project-text">
+                        <h2>Convertisseur de température</h2>
+                        <p class="subtext">Le convertisseur de température était encore un défi pour moi, je voulais travailler sur les opérations mathématiques en javascript tout en réalisant un design épuré.</p>
+                    </div>
+                </div>
+
+                <div class="project" id="ctp">
+                    <div class="project-image-wrapper">
+                        <img class="project-image" src="img/ctp.png" alt="image caniscat education">
+                    </div>
+                    <div class="project-text">
+                        <h2>ClasseTonProf!</h2>
+                        <p class="subtext">ClasseTonProf! est un site sur lequel j'ai travaillé en tant que technicien principal de certaines pages, j'ai aussi structuré la base de donnée du site.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow-wrapper">
+                <img class="mode-icon" src="img/down-arrow.svg" alt="flèche vers le bas">
+                <p>Me contacter</p>
+            </div>
+        </div>
+
+        <div class="section4">
+            <h1 id="contact-us">Me contacter</h1>
+            <div class="contact-form-wrapper">
+                <h3>Travaillons ensemble !</h3>
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="contact-category">
+                            <label>Nom</label>
+                            <input type="text" name="from_name" class="from_name contact-input" id="from_name" required>
+                        </div>
+                        <div class="contact-category">
+                            <label>Email</label>
+                            <input type="email" name="email" class="email contact-input" id="email" required>
+                        </div>
+                        <div class="contact-category"> 
+                            <label>Message</label>
+                            <textarea name="message" class="contact-input contact-textarea" required></textarea>
+                        </div>
+                        <input type="submit" value="Envoyer" class="contact-button">
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<footer>
+    <p>Copyright © 2024 - Tous droits réservés</p>
+</footer>
+
+<script>
+    document.getElementById("navbar-about-me").addEventListener("click", function() {
+        window.location.assign("#about-me")
+    });
+    document.getElementById("navbar-project").addEventListener("click", function() {
+        window.location.assign("#project")
+    });
+    document.getElementById("navbar-contact-us").addEventListener("click", function() {
+        window.location.assign("#contact-us")
+    });
+    document.getElementById("burger-menu").addEventListener("click", function() {
+        document.getElementById("mobile-menu").style.display = "flex"
+    });
+    document.getElementById("close-menu").addEventListener("click", function() {
+        document.getElementById("burger-menu").style = "display: flex"
+        document.getElementById("mobile-menu").style = "display: none"
+    });
+
+    document.getElementById("mobile-navbar-about-me").addEventListener("click", function() {
+        window.location.assign("#about-me")
+    });
+    document.getElementById("mobile-navbar-project").addEventListener("click", function() {
+        window.location.assign("#project")
+    });
+    document.getElementById("mobile-navbar-contact-us").addEventListener("click", function() {
+        window.location.assign("#contact-us")
+    });
+
+    document.getElementById("cce").addEventListener("click", function() {
+        window.window.open("https://caniscat-education.fr",'_blank');
+    });
+    document.getElementById("conv").addEventListener("click", function() {
+        window.window.open("https://lun4rium.github.io/convertisseur/",'_blank');
+    });
+    document.getElementById("ctp").addEventListener("click", function() {
+        window.window.open("https://classetonprof.fr",'_blank');
+    });
+
+    document.getElementById("hire-me-button").addEventListener("click", function() {
+        window.location.assign("#contact-us");
+    });
+
+    
+
+</script>
+</html>
