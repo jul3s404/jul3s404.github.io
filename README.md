@@ -5,17 +5,17 @@
 
 > Bienvenue sur la page de mon portfolio, j'utilise github uniquement pour l'héberger mais si vous voulez l'utiliser comme template, vous pouvez.
 
-### 🏠 [Homepage](https://jul3s404.github.io/)
+### 🏠 [Page d'accueil](https://jul3s404.github.io/)
 
-## Author
+## Auteur
 
 👤 **Jules.404**
 
 * Github: [@jul3s404](https://github.com/jul3s404)
 
-## Show your support
+## Montrez votre intérêt !
 
-Give a ⭐️ if this project helped you!
+Mettez une ⭐️ si ce projet vous a aidé !
 
 ***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+
