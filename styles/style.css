@@ -10,6 +10,8 @@ body{
     --secondary: #2c6877;
     --accent: #50b0c8;
     --background2: #00161b;
+    --border: hsl(192, 46%, 32%, 30%);
+    --background20: hsl(192, 46%, 32%, 20%);
 
     background-color: var(--background);
     display: flex;
@@ -21,6 +23,8 @@ body{
     
 }
 
+
+
 .navbar-wrapper{
     display: flex;
     flex-direction: row;
@@ -28,7 +32,7 @@ body{
     align-items: center;
     color: var(--text);
     padding-bottom: 10px;
-    border-bottom: 1px solid hsl(192, 46%, 32%, 30%);
+    border-bottom: 2px solid var(--border);
 }
 
 .navbar-elements{
@@ -57,7 +61,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 200px;
+    gap: 60px;
 }
 
 .me{
@@ -97,10 +101,10 @@ body{
 .hire-me-button{
     padding: 30px;
     width: 300px;
-    height: 100px;
+    height: 90px;
     font-size: 25px;
-    background-color: hsl(192, 46%, 32%, 20%);
-    border: 2px solid hsl(192, 46%, 32%, 30%);
+    background-color: var(--background20);
+    border: 2px solid var(--border);
     border-radius: 6px;
     color: var(--text);
     -webkit-box-shadow: 0px 0px 19px -5px var(--secondary); 
@@ -202,17 +206,27 @@ body{
 }
 
 .skill-dashboard-wrapper{
-    background-color: hsl(192, 46%, 32%, 20%);
-    border: 2px solid hsl(192, 46%, 32%, 30%);
+    background-color: var(--background20);
+    border: 2px solid var(--border);
     border-radius: 6px;
     padding: 30px;
+    
     display: flex; 
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 60px 30px;
     -webkit-box-shadow: 0px 0px 19px -5px var(--secondary); 
     box-shadow: 0px 0px 19px -5px var(--secondary);
+}
+
+.colored{
+    font-size: 45px;
+    display: flex;
+    flex: 1 0 21%;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -254,13 +268,13 @@ body{
 }
 
 .project{
-    border: 2px solid hsl(192, 46%, 32%, 30%);
+    border: 2px solid var(--border);
     border-radius: 6px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: hsl(192, 46%, 32%, 20%);
+    background-color: var(--background20);
     cursor: pointer;
     -webkit-box-shadow: 0px 0px 19px -5px var(--secondary); 
     box-shadow: 0px 0px 19px -5px var(--secondary);
@@ -299,7 +313,7 @@ body{
 }
 
 .section4{
-    background-color: #00161b;
+    background-color: var(--background2);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -319,12 +333,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: hsl(192, 46%, 32%, 20%);
+    background-color: var(--background20);
 
     -webkit-box-shadow: 0px 0px 19px -5px var(--secondary); 
     box-shadow: 0px 0px 19px -5px var(--secondary);
 
-    border: 2px hsl(192, 46%, 32%, 30%) solid;
+    border: 2px var(--border) solid;
     border-radius: 6px;
     padding: 30px;
     width: 50vw;
@@ -352,8 +366,8 @@ body{
 }
 
 .contact-input{
-    background-color: hsl(192, 46%, 32%, 20%);
-    border: 2px solid hsl(192, 46%, 32%, 30%);
+    background-color: var(--background20);
+    border: 2px solid var(--border);
     border-radius: 6px;
     padding: 5px;
     color: var(--text);
@@ -373,8 +387,8 @@ body{
 
 .contact-button{
     padding: 10px;
-    background-color: hsl(192, 46%, 32%, 20%);
-    border: 2px solid hsl(192, 46%, 32%, 30%);
+    background-color: var(--background20);
+    border: 2px solid var(--border);
     border-radius: 6px;
     color: var(--text);
     transition: all .2s;
@@ -409,12 +423,12 @@ body{
     -webkit-box-shadow: 0px 0px 19px -5px var(--secondary); 
     box-shadow: 0px 0px 19px -5px var(--secondary);
     transition: all .2s;
-
+    animation: showMenu .2s ;
 }
 
 .mobile-menu-title{
     width: 100%;
-    border-bottom: 2px solid hsl(192, 46%, 32%, 30%);
+    border-bottom: 2px solid var(--border);
 }
 
 .mobile-menu-elements{
@@ -571,10 +585,11 @@ footer{
 }
 
 
-
-
-
-@media screen and (max-width: 1442px) {
-
+@keyframes showMenu {
+    0% {
+      top: -400px;
+    }
+    100% {
+      top:0px;
+    }
 }
-
