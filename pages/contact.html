@@ -3,18 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Jules KB</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+
     <script src="https://kit.fontawesome.com/bf85678e21.js" crossorigin="anonymous"></script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init({
+            publicKey: 'J6c3p4__Wr9MF1LXS',
+        });
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_6x59mo9', 'template_eoz92h8', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
 </head>
 <body>
-
     <div class="menu-background-container" id="menu" >
         <div class="menu-container" id="menuInside">
             <div class="menu-search-bar-container">
@@ -89,39 +109,44 @@
                 <a href="/pages/about.html" class="element">A propos</a>
             </div>
             <div class="search-bar-container" id="search-bar-container" onclick="toggleMenu()">
-                <img class="search-icon" src="img/search.svg" alt="" width="20px" height="20px">
+                <img class="search-icon" src="../img/search.svg" alt="" width="20px" height="20px">
                 <p class="search-bar-text">Rechercher...</p>
                 <div class="ctrl-k">
                     <p>Ctrl k</p>
                 </div>
             </div>
             <div class="toggle-mode-icon-container" onclick="toggleCookie()">
-                <img id="toggleMode" class="toggle-mode-icon" src="img/dark-mode.svg" alt="" width="35px" height="35px">
+                <img id="toggleMode" class="toggle-mode-icon" src="../img/dark-mode.svg" alt="" width="35px" height="35px">
             </div>
         </div>
     </div>
 
     <div class="main-section-container">
-        <div class="blue-circle"></div>
-        <div class="main-section-text">
-            <h1 class="main-section-name">Jules Kreder-Bail</h1>
-            <h3 class="main-section-undertext">Développeur web full-stack.</h3>
-        </div>
-        <div class="main-section-image-container">
-            <img class="main-section-image" src="img/me.JPG" alt="" width="387px" height="387px">
-        </div>
-    </div>
+        <div class="contact-form-wrapper">
+            <h1>Travaillons ensemble !</h1>
+            <div class="contact-form-container">
+                <form id="contact-form" class="contact-form">
+                    <div class="contact-category">
+                        <label>Nom</label>
+                        <input type="text" name="from_name" class="from_name contact-input" id="from_name" required="">
+                    </div>
+                    <div class="contact-category">
+                        <label>Email</label>
+                        <input type="email" name="email" class="email contact-input" id="email" required="">
+                    </div>
+                    <div class="contact-category"> 
+                        <label>Message</label>
+                        <textarea name="message" class="contact-input contact-textarea" required=""></textarea>
+                    </div>
+                    <input type="submit" value="Envoyer" class="contact-button">
 
-    <div class="start-section-container">
-        <div class="text-container" onclick="toggleMenu()">
-            <p class="press-to-start">Appuyez sur </p>
-            <div class="ctrl-k-start">
-                <p>Ctrl k</p>
+                </form>
             </div>
-            <p class="press-to-start">pour commencer</p>
+
         </div>
     </div>
 
+    <br><br><br><br>
     <div class="separator"></div>
 
     <div class="footer">
@@ -140,6 +165,7 @@
         </div>
     </div>
 </body>
-<script src="js/main.js"></script>
-<script src="js/cookies.js"></script>
+
+<script src="../js/cookies.js"></script>
+<script src="../js/main-pages.js"></script>
 </html>
