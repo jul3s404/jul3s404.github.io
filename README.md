@@ -4,7 +4,7 @@
 </p>
 
 > Bienvenue sur la page de mon portfolio, j'utilise github uniquement pour l'héberger mais si vous voulez l'utiliser comme template, vous pouvez.
-
+> Layout inspiré de https://mateusf.com/projects
 ### 🏠 [Page d'accueil](https://jul3s404.github.io/)
 
 ## Auteur
