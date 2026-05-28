@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noé Concept</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="img/icon.jpg" />
+</head>
+<body>
+    <div class="whatsapp-container">
+        <a href="https://wa.me/35227862027" target="_blank" class="whatsapp-link">
+            <img src="img/whatsapp-svgrepo-com.svg" alt="WhatsApp Icon" width="40px" class="whatsapp-icon">
+        </a>
+
+    </div>
+
+    <div class="head-content-container">
+
+        <div class="image-info">
+            <img src="img/mainimg.jpg" alt="Image d'illustration qui représente une pièce en peinture" class="mainimg">
+            <h1>Noé Concept</h1>
+            <h2>Votre expert en rénovation au Luxembourg</h2>
+        </div>
+        <div class="image-button">
+            <button class="primary-button" onclick="devis()">Nous contacter</button>
+           <!-- <button class="secondary-button">Nous contacter</button>-->
+        </div>
+
+            <h3 class="service-text">Nos services</h3>
+            <div class="attributes-container">
+                
+                <div class="attribute">
+                    <img src="img/brush-svgrepo-com.svg" alt="Icone de pinceau" width="27px" class="brush-img">
+                    <p>Peinture</p>
+                </div>
+                
+                <div class="attribute">
+                    <img src="img/electricity-svgrepo-com.svg" alt="Icone d'éclair" width="27px" class="electricity-img">
+                    <p>Electricité</p>
+                </div>
+                
+                <div class="attribute">
+                    <img src="img/house-01-svgrepo-com.svg" alt="Icone de maison" width="27px" class="house-img">
+                    <p>Rénovation</p>
+                </div>
+
+                <!-- Après 1024px -->
+
+                
+                <div class="attribute desktop">
+                    <img src="img/brush-svgrepo-com.svg" alt="Icone de pinceau" width="27px" class="brush-img">
+                    <p>Peinture</p>
+                </div>
+                <div class="vbar desktop"></div>
+                <div class="attribute desktop">
+                    <img src="img/electricity-svgrepo-com.svg" alt="Icone d'éclair" width="27px" class="electricity-img">
+                    <p>Electricité</p>
+                </div>
+                <div class="vbar desktop"></div>
+                <div class="attribute desktop">
+                    <img src="img/house-01-svgrepo-com.svg" alt="Icone de maison" width="27px" class="house-img">
+                    <p>Rénovation</p>
+                </div>
+
+                
+            </div>
+
+    </div>
+    <div class="mid-content-container secondary-background">
+        <h1>A propos de nous </h1>
+        <div class="hbar"></div>
+        <div>
+            <p class="text">
+                Créer des espaces qui marquent.
+                <br><br>
+                Chez Noé Concept, nous transformons vos idées en réalisations durables, avec une exigence constante sur la qualité et les détails.
+                <br><br>
+                Que vous souhaitiez rénover votre maison, votre appartement ou votre espace commercial, nous sommes là pour vous accompagner à chaque étape du processus.
+            </p>
+        </div>
+    </div>
+    <div class="mid-content-container secondary-background comparison-section">
+        <h1>Avant / Après</h1>
+        <div class="hbar"></div>
+        <p class="text comparison-intro">
+            Faites glisser le curseur pour comparer le résultat avant et après rénovation.
+        </p>
+        <div class="comparison-slider" data-comparison>
+            <div class="comparison-panel comparison-before">
+                <img src="img/avant.jpg" alt="Photo avant rénovation" class="comparison-image">
+                <span class="comparison-tag">Avant</span>
+            </div>
+            <div class="comparison-panel comparison-after">
+                <img src="img/apres.jpg" alt="Photo après rénovation" class="comparison-image">
+                <span class="comparison-tag">Après</span>
+            </div>
+            <div class="comparison-divider" aria-hidden="true"></div>
+            <input class="comparison-range" type="range" min="0" max="100" value="50" aria-label="Comparer les images avant et après">
+        </div>
+    </div>
+        
+    <div class="mid-content-container">
+        <h1>Nos atouts</h1>
+        <div class="hbar"></div>
+        <div class="checklist-container">
+            <div class="checklist">
+                <img src="img/tick-circle-svgrepo-com.svg" alt="Icone cocher" width="32px" class="tick-image">
+                <p>Entreprise locale</p>
+            </div>
+            <div class="checklist">
+                <img src="img/tick-circle-svgrepo-com.svg" alt="Icone cocher" width="32px" class="tick-image">
+                <p>Respect des délais</p>
+            </div>
+            <div class="checklist">
+                <img src="img/tick-circle-svgrepo-com.svg" alt="Icone cocher" width="32px" class="tick-image">
+                <p>Produits professionnels</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mid-content-container contact-section secondary-background" id="contact">
+            <h1>Contactez-nous</h1>
+            <p>Vous avez des questions ou souhaitez obtenir un devis ? N'hésitez pas à nous contacter !</p>
+            <div class="hbar"></div>
+            <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-row">
+                    <label for="name">Nom</label>
+                    <input id="name" name="name" type="text" placeholder="Votre nom" required>
+                </div>
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="votre@exemple.com" required>
+                </div>
+                <div class="form-row">
+                    <label for="phone">Téléphone (optionnel)</label>
+                    <input id="phone" name="phone" type="tel" placeholder="(+352) ...">
+                </div>
+                <div class="form-row">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="primary-button">Envoyer</button>
+                    <div class="form-success" aria-live="polite" style="display:none">Merci — votre message a été envoyé.</div>
+                </div>
+            </form>
+        </div>
+
+    <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d647.3270917076694!2d5.986815328581639!3d49.535331798207025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47953561ea5c4519%3A0x65f40eddc9163142!2s4%20b.%20d.%20Kazebaach%2C%203945%20Monnerich%2C%20Luxembourg!5e0!3m2!1sen!2sfr!4v1774522171852!5m2!1sen!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <footer class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>Noé Concept</h2>
+                <p>Votre expert en rénovation au Luxembourg.</p>
+            </div>
+            <nav class="footer-links" aria-label="Navigation pied de page">
+                <h3>Navigation</h3>
+                <a href="#contact">Contact</a>
+                <a href="https://wa.me/35227862027" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a href="pages/legal.html">Mentions légales</a>
+            </nav>
+            <div class="footer-social">
+                <h3>Réseaux</h3>
+                <div class="social-icons">
+                    <a href="https://wa.me/35227862027" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <img src="img/whatsapp-svgrepo-com.svg" alt="Icône WhatsApp" width="24" height="24">
+                    </a>
+                    <a href="https://www.instagram.com/noeconcept_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <img src="img/instagram-1-svgrepo-com.svg" alt="Icône Instagram" width="24" height="24">
+                    </a>
+                </div>
+                <a href="mailto:contact@noeconcept.lu" class="footer-mail">contact@noeconcept.lu</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Noé Concept. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script/comparison.js"></script>
+    <script src="script/contact.js"></script>
+</body>
+</html>
